@@ -8,7 +8,7 @@ import Container from "./Container";
 
 const ItemCard = ({image,discount,productName,discountPrice,price,review}) => {
   return (
-    <div className="flex justify-center mt-10">
+    <div className="flex justify-center mt-15">
       <div className="w-auto h-auto lg:w-[270px] lg:h-[350px] group font-[poppins]">
         <div className="relative overflow-hidden">
           <img src={image} alt="" className="w-full"/>

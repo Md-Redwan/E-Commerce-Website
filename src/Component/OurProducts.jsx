@@ -9,6 +9,11 @@ import Camera from "../assets/Camera.png";
 import Laptop from "../assets/Laptop.png";
 import GroomingProducts from "../assets/GroomingProducts.png";
 
+import KidsCar from "../assets/KidsCar.png";
+import SoccerCleats from "../assets/SoccerCleats.png";
+import GP11Gamepad from "../assets/GP11Gamepad.png";
+import Jacket from "../assets/Jacket.png";
+
 import TitleCard from "./TitleCard";
 import CountDown from "./CountDown";
 import ItemCard from "./ItemCard";
@@ -18,7 +23,7 @@ const FlashSales = () => {
     const { onClick } = props;
     return (
       <div
-        className="hidden w-11.5 h-11.5 bg-[#F5F5F5] rounded-full lg:flex justify-center items-center absolute -top-19 right-5.5 cursor-pointer"
+        className="hidden w-11.5 h-11.5 bg-[#F5F5F5] rounded-full lg:flex justify-center items-center absolute -top-10 right-5.5 cursor-pointer"
         onClick={onClick}
       >
         <FiArrowRight className="text-2xl " />
@@ -30,7 +35,7 @@ const FlashSales = () => {
     const { onClick } = props;
     return (
       <div
-        className="hidden w-11.5 h-11.5 bg-[#F5F5F5] rounded-full lg:flex justify-center items-center absolute -top-19 right-19 cursor-pointer"
+        className="hidden w-11.5 h-11.5 bg-[#F5F5F5] rounded-full lg:flex justify-center items-center absolute -top-10 right-19 cursor-pointer"
         onClick={onClick}
       >
         <FiArrowLeft className="text-2xl " />
@@ -90,7 +95,8 @@ const FlashSales = () => {
           </div>
         </div>
 
-        <Slider {...settings} className="mt-10 flex gap-2">
+        <Slider {...settings} className=" flex gap-2">
+          {/* first column */}
           <div>
             <ItemCard
               image={DogFood}
@@ -100,58 +106,68 @@ const FlashSales = () => {
             />
 
             <ItemCard
-              image={Camera}
+              image={KidsCar}
               productName="AK-900 Wired Keyboard"
               discountPrice="$960"
               review="75"
             />
           </div>
 
+          {/* second column */}
           <div>
             <ItemCard
-              image={DogFood}
+              image={Camera}
               productName="HAVIT HV-G92 Gamepad"
               discountPrice="$120"
               review="88"
             />
 
             <ItemCard
-              image={Camera}
+              image={SoccerCleats}
               productName="AK-900 Wired Keyboard"
               discountPrice="$960"
               review="75"
             />
           </div>
+
+
+          {/* third column */}
           <div>
             <ItemCard
-              image={DogFood}
+              image={Laptop}
               productName="HAVIT HV-G92 Gamepad"
               discountPrice="$120"
               review="88"
             />
 
             <ItemCard
-              image={Camera}
+              image={GP11Gamepad}
               productName="AK-900 Wired Keyboard"
               discountPrice="$960"
               review="75"
             />
           </div>
+
+
+          {/* fourth column */}
           <div>
             <ItemCard
-              image={DogFood}
+              image={GroomingProducts}
               productName="HAVIT HV-G92 Gamepad"
               discountPrice="$120"
               review="88"
             />
 
             <ItemCard
-              image={Camera}
+              image={Jacket}
               productName="AK-900 Wired Keyboard"
               discountPrice="$960"
               review="75"
             />
           </div>
+
+
+          {/* fifth column */}
           <div>
             <ItemCard
               image={DogFood}
@@ -161,52 +177,57 @@ const FlashSales = () => {
             />
 
             <ItemCard
-              image={Camera}
+              image={KidsCar}
               productName="AK-900 Wired Keyboard"
               discountPrice="$960"
               review="75"
             />
           </div>
+          {/* sixth column */}
           <div>
             <ItemCard
-              image={DogFood}
+              image={Camera}
               productName="HAVIT HV-G92 Gamepad"
               discountPrice="$120"
               review="88"
             />
 
             <ItemCard
-              image={Camera}
+              image={SoccerCleats}
               productName="AK-900 Wired Keyboard"
               discountPrice="$960"
               review="75"
             />
           </div>
+
+          {/* seventh column */}
           <div>
             <ItemCard
-              image={DogFood}
+              image={Laptop}
               productName="HAVIT HV-G92 Gamepad"
               discountPrice="$120"
               review="88"
             />
 
             <ItemCard
-              image={Camera}
+              image={GP11Gamepad}
               productName="AK-900 Wired Keyboard"
               discountPrice="$960"
               review="75"
             />
           </div>
+
+          {/* eighth column */}
           <div>
             <ItemCard
-              image={DogFood}
+              image={GroomingProducts}
               productName="HAVIT HV-G92 Gamepad"
               discountPrice="$120"
               review="88"
             />
 
             <ItemCard
-              image={Camera}
+              image={Jacket}
               productName="AK-900 Wired Keyboard"
               discountPrice="$960"
               review="75"
