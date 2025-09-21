@@ -100,16 +100,16 @@ const FlashSales = () => {
           <div>
             <ItemCard
               image={DogFood}
-              productName="HAVIT HV-G92 Gamepad"
-              discountPrice="$120"
-              review="88"
+              productName="Breed Dry Dog Food"
+              discountPrice="$100"
+              review="35"
             />
 
             <ItemCard
               image={KidsCar}
-              productName="AK-900 Wired Keyboard"
+              productName="Kids Electric Car"
               discountPrice="$960"
-              review="75"
+              review="65"
             />
           </div>
 
@@ -117,16 +117,16 @@ const FlashSales = () => {
           <div>
             <ItemCard
               image={Camera}
-              productName="HAVIT HV-G92 Gamepad"
-              discountPrice="$120"
-              review="88"
+              productName="CANON EOS DSLR Camera"
+              discountPrice="$360"
+              review="95"
             />
 
             <ItemCard
               image={SoccerCleats}
-              productName="AK-900 Wired Keyboard"
-              discountPrice="$960"
-              review="75"
+              productName="Jr. Zoom Soccer Cleats"
+              discountPrice="$$1160"
+              review="35"
             />
           </div>
 
@@ -135,16 +135,16 @@ const FlashSales = () => {
           <div>
             <ItemCard
               image={Laptop}
-              productName="HAVIT HV-G92 Gamepad"
-              discountPrice="$120"
-              review="88"
+              productName="ASUS FHD Gaming Laptop"
+              discountPrice="$700"
+              review="325"
             />
 
             <ItemCard
               image={GP11Gamepad}
-              productName="AK-900 Wired Keyboard"
-              discountPrice="$960"
-              review="75"
+              productName="GP11 Shooter USB Gamepad"
+              discountPrice="$660"
+              review="55"
             />
           </div>
 
@@ -153,16 +153,16 @@ const FlashSales = () => {
           <div>
             <ItemCard
               image={GroomingProducts}
-              productName="HAVIT HV-G92 Gamepad"
-              discountPrice="$120"
-              review="88"
+              productName="Curology Product Set "
+              discountPrice="$500"
+              review="145"
             />
 
             <ItemCard
               image={Jacket}
-              productName="AK-900 Wired Keyboard"
-              discountPrice="$960"
-              review="75"
+              productName="Quilted Satin Jacket"
+              discountPrice="$660"
+              review="55"
             />
           </div>
 
@@ -171,32 +171,32 @@ const FlashSales = () => {
           <div>
             <ItemCard
               image={DogFood}
-              productName="HAVIT HV-G92 Gamepad"
-              discountPrice="$120"
-              review="88"
+              productName="Breed Dry Dog Food"
+              discountPrice="$100"
+              review="35"
             />
 
             <ItemCard
               image={KidsCar}
-              productName="AK-900 Wired Keyboard"
+              productName="Kids Electric Car"
               discountPrice="$960"
-              review="75"
+              review="65"
             />
           </div>
           {/* sixth column */}
           <div>
             <ItemCard
               image={Camera}
-              productName="HAVIT HV-G92 Gamepad"
-              discountPrice="$120"
-              review="88"
+              productName="CANON EOS DSLR Camera"
+              discountPrice="$360"
+              review="95"
             />
 
             <ItemCard
               image={SoccerCleats}
-              productName="AK-900 Wired Keyboard"
-              discountPrice="$960"
-              review="75"
+              productName="Jr. Zoom Soccer Cleats"
+              discountPrice="$$1160"
+              review="35"
             />
           </div>
 
@@ -204,16 +204,16 @@ const FlashSales = () => {
           <div>
             <ItemCard
               image={Laptop}
-              productName="HAVIT HV-G92 Gamepad"
-              discountPrice="$120"
-              review="88"
+              productName="ASUS FHD Gaming Laptop"
+              discountPrice="$700"
+              review="325"
             />
 
             <ItemCard
               image={GP11Gamepad}
-              productName="AK-900 Wired Keyboard"
-              discountPrice="$960"
-              review="75"
+              productName="GP11 Shooter USB Gamepad"
+              discountPrice="$660"
+              review="55"
             />
           </div>
 
@@ -221,21 +221,21 @@ const FlashSales = () => {
           <div>
             <ItemCard
               image={GroomingProducts}
-              productName="HAVIT HV-G92 Gamepad"
-              discountPrice="$120"
-              review="88"
+              productName="Curology Product Set "
+              discountPrice="$500"
+              review="145"
             />
 
             <ItemCard
               image={Jacket}
-              productName="AK-900 Wired Keyboard"
-              discountPrice="$960"
-              review="75"
+              productName="Quilted Satin Jacket"
+              discountPrice="$660"
+              review="55"
             />
           </div>
         </Slider>
 
-        <div className="flex justify-center mt-[37px]">
+        <div className="flex justify-center mt-15">
           <button className="bg-[#DB4444] font-[poppins] font-medium leading-6 text-white py-4 px-12 rounded-sm cursor-pointer">
             View All Products
           </button>
