@@ -8,7 +8,7 @@ import Speakers from "../assets/Speakers.png";
 
 const NewArrival = () => {
   return (
-    <div className="mt-28 mb-20">
+    <div className="mt-28">
       <Container>
         <TitleCard titleName="Featured" titleHeading="New Arrival" />
         <div className="mt-15 flex flex-col items-center lg:flex-row lg:justify-evenly xl:justify-between">
