@@ -16,12 +16,12 @@ const OurService = () => {
                 <p className='text-[14px] leading-5'>Free delivery for all orders over $140</p>
             </div>
             <div className='flex flex-col items-center'>
-                <img src={FastDelivery} alt="" />
+                <img src={CustomerService} alt="" />
                 <h5 className='font-semibold text-[20px] leading-7 mt-6 mb-2'>24/7 CUSTOMER SERVICE</h5>
                 <p className='text-[14px] leading-5'>Friendly 24/7 customer support</p>
             </div>
             <div className='flex flex-col items-center'>
-                <img src={FastDelivery} alt="" />
+                <img src={Guarantee} alt="" />
                 <h5 className='font-semibold text-[20px] leading-7 mt-6 mb-2'>MONEY BACK GUARANTEE</h5>
                 <p className='text-[14px] leading-5'>We reurn money within 30 days</p>
             </div>

@@ -9,6 +9,7 @@ import Music from '../Component/Music'
 import OurProducts from '../Component/OurProducts'
 import NewArrival from '../Component/NewArrival'
 import OurService from '../Component/OurService'
+import Footer from '../Component/Footer'
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
        <OurProducts/>
        <NewArrival/>
        <OurService/>
+       <Footer/>
     </>
   )
 }
