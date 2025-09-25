@@ -5,8 +5,9 @@ import { IoHeartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import Container from "./Container";
+import { Link } from "react-router";
 
-const ItemCard = ({image,discount,productName,discountPrice,price,review}) => {
+const ItemCard = ({image,discount,productName,discountPrice,price,review,productLink}) => {
   return (
     <div className="flex justify-center mt-15">
       <div className="w-auto h-auto lg:w-[270px] lg:h-[350px] group font-[poppins]">
@@ -27,7 +28,8 @@ const ItemCard = ({image,discount,productName,discountPrice,price,review}) => {
             <a href="#">Add To Cart</a>
           </div>
         </div>
-        <h2 className="leading-6 font-medium mt-4">{productName}</h2>
+        
+        <Link to={productLink} className="leading-6 font-medium mt-4">{productName}</Link>
         <Flex className="font-medium gap-3 mt-2">
           <h3 className="text-[#DB4444] leading-6">{discountPrice}</h3>
           <h3 className="text-[#818081] leading-6 line-through">{price}</h3>
