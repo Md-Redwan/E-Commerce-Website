@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Component/Header";
 import NavBar from "../Component/NavBar";
 import Container from "../Component/Container";
 import List from "../Component/List";
 import ListItem from "../Component/ListItem";
 import { GoDotFill } from "react-icons/go";
+import ItemCard from "../Component/ItemCard";
 
 const Shop = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((data)=>{
+        setProducts(data.products)
+      });
+  }, []);
+  console.log(products)
+
   return (
     <div>
       <Header />
@@ -51,12 +63,34 @@ const Shop = () => {
           </div>
           <div className="w-[75%]">
             <div className="flex gap-3 justify-end items-center">
-                <h5 className="leading-6">Show :</h5>
-              <select name="" id="" className="px-[43px] py-[3px] border-1 border-[#D9D9D9] rounded-[5px]">
+              <h5 className="leading-6">Show :</h5>
+              <select
+                name=""
+                id=""
+                className="px-[43px] py-[3px] border-1 border-[#D9D9D9] rounded-[5px]"
+              >
                 <option value="">6</option>
                 <option value="">9</option>
                 <option value="">12</option>
               </select>
+            </div>
+            <div className="flex flex-wrap-reverse gap-5 mt-7.5">
+              {
+                products.map((item)=>{
+                  return(
+
+                    <ItemCard
+                    image={item.thumbnail}
+                    discount={item.}
+                    productName={}
+                    discountPrice={}
+                    price={}
+                    review={}
+                    />
+
+                  )
+                })
+              }
             </div>
           </div>
         </div>
