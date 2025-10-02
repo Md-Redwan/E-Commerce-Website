@@ -5,7 +5,8 @@ import Container from "../Component/Container";
 import List from "../Component/List";
 import ListItem from "../Component/ListItem";
 import { GoDotFill } from "react-icons/go";
-import ItemCard from "../Component/ItemCard";
+
+import Pagination from "../Component/Pagination";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -74,22 +75,14 @@ const Shop = () => {
                 <option value="">12</option>
               </select>
             </div>
-            <div className="flex flex-wrap-reverse gap-5 mt-7.5">
+            <div className="">
               {
-                products.map((item)=>{
-                  return(
-
-                    <ItemCard
-                    image={item.thumbnail}
-                    discount={item.}
-                    productName={}
-                    discountPrice={}
-                    price={}
-                    review={}
-                    />
-
-                  )
-                })
+                // products.map((item)=>{
+                //   return(
+                
+                //   )
+                // })
+                  <Pagination itemsPerPage={6} products={products}/>
               }
             </div>
           </div>

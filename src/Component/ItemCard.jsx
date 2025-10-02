@@ -7,14 +7,14 @@ import { FaStar } from "react-icons/fa";
 import Container from "./Container";
 import { Link } from "react-router";
 
-const ItemCard = ({image,discount,productName,discountPrice,price,review,productLink}) => {
+const ItemCard = ({image,discount,productName,discountPrice,price,review,productLink,percentage,className,dollar}) => {
   return (
     <div className="flex justify-center mt-15">
       <div className="w-auto h-auto lg:w-[270px] lg:h-[350px] group font-[poppins]">
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden bg-[#F5F5F5] rounded-sm">
           <img src={image} alt="" className="w-full"/>
-          <h2 className=" bg-[#DB4444] leading-4.5 text-xs text-white inline rounded-sm absolute top-3 left-3">
-            {discount}
+          <h2 className={` bg-[#DB4444] leading-4.5 text-xs text-white inline rounded-sm absolute top-3 left-3 ${className}`}>
+            {discount}{percentage}
           </h2>
           <div className="absolute top-3 right-3">
             <div className="w-8.5 h-8.5 bg-white rounded-full flex justify-center items-center text-2xl cursor-pointer">
@@ -31,8 +31,8 @@ const ItemCard = ({image,discount,productName,discountPrice,price,review,product
         
         <Link to={productLink} className="leading-6 font-medium mt-4">{productName}</Link>
         <Flex className="font-medium gap-3 mt-2">
-          <h3 className="text-[#DB4444] leading-6">{discountPrice}</h3>
-          <h3 className="text-[#818081] leading-6 line-through">{price}</h3>
+          <h3 className="text-[#DB4444] leading-6">{dollar}{discountPrice}</h3>
+          <h3 className="text-[#818081] leading-6 line-through">{dollar}{price}</h3>
         </Flex>
         <div className="flex items-center gap-1 mt-2">
           <FaStar className="text-[#FFAD33]" />

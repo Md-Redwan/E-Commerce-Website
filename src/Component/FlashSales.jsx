@@ -98,23 +98,23 @@ function SamplePrevArrow(props) {
           
         </div>
         <Slider {...settings} className="mt-10 flex gap-2">
-          <ItemCard productLink="/G92Gamepad" image={Gamepad} discount="-40%"  productName="HAVIT HV-G92 Gamepad"  discountPrice= "$120" price= "$160" review="88"/>
+          <ItemCard className="py-1 px-3" productLink="/G92Gamepad" image={Gamepad} discount="-40%"  productName="HAVIT HV-G92 Gamepad"  discountPrice= "$120" price= "$160" review="88"/>
 
-          <ItemCard image={Keyboard} discount="-35%"  productName="AK-900 Wired Keyboard"  discountPrice= "$960" price= "$1160" review="75"/>
+          <ItemCard className="py-1 px-3" image={Keyboard} discount="-35%"  productName="AK-900 Wired Keyboard"  discountPrice= "$960" price= "$1160" review="75"/>
 
-          <ItemCard image={Monitor} discount="-30%"  productName="IPS LCD Gaming Monitor"  discountPrice= "$370" price= "$400" review="99"/>
+          <ItemCard className="py-1 px-3" image={Monitor} discount="-30%"  productName="IPS LCD Gaming Monitor"  discountPrice= "$370" price= "$400" review="99"/>
 
-          <ItemCard image={Chair} discount="-25%"  productName="S-Series Comfort Chair"  discountPrice= "$375" price= "$400" review="99"/>
+          <ItemCard className="py-1 px-3" image={Chair} discount="-25%"  productName="S-Series Comfort Chair"  discountPrice= "$375" price= "$400" review="99"/>
 
 
           
-          <ItemCard image={Gamepad} discount="-40%"  productName="HAVIT HV-G92 Gamepad"  discountPrice= "$120" price= "$160" review="88"/>
+          <ItemCard className="py-1 px-3" image={Gamepad} discount="-40%"  productName="HAVIT HV-G92 Gamepad"  discountPrice= "$120" price= "$160" review="88"/>
 
-          <ItemCard image={Keyboard} discount="-35%"  productName="AK-900 Wired Keyboard"  discountPrice= "$960" price= "$1160" review="75"/>
+          <ItemCard className="py-1 px-3" image={Keyboard} discount="-35%"  productName="AK-900 Wired Keyboard"  discountPrice= "$960" price= "$1160" review="75"/>
 
-          <ItemCard image={Monitor} discount="-30%"  productName="IPS LCD Gaming Monitor"  discountPrice= "$370" price= "$400" review="99"/>
+          <ItemCard className="py-1 px-3" image={Monitor} discount="-30%"  productName="IPS LCD Gaming Monitor"  discountPrice= "$370" price= "$400" review="99"/>
 
-          <ItemCard image={Chair} discount="-25%"  productName="S-Series Comfort Chair"  discountPrice= "$375" price= "$400" review="99"/>
+          <ItemCard className="py-1 px-3" image={Chair} discount="-25%"  productName="S-Series Comfort Chair"  discountPrice= "$375" price= "$400" review="99"/>
         </Slider>
 
         <div className="flex justify-center mt-[37px]">
