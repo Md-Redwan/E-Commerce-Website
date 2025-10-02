@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Component/Header";
 import NavBar from "../Component/NavBar";
+import Footer from "../Component/Footer";
 import Container from "../Component/Container";
 import List from "../Component/List";
 import ListItem from "../Component/ListItem";
@@ -88,6 +89,7 @@ const Shop = () => {
           </div>
         </div>
       </Container>
+      <Footer/>
     </div>
   );
 };
