@@ -12,6 +12,8 @@ import { FiPlus } from "react-icons/fi";
 import React, { useState } from "react";
 import Flex from "../Component/Flex";
 import { IoHeart } from "react-icons/io5";
+import { TbTruckDelivery } from "react-icons/tb";
+
 
 
 const G92Gamepad = () => {
@@ -107,7 +109,7 @@ const G92Gamepad = () => {
               </div>
             </div>
             <Flex className="justify-between items-center  mt-6">
-              <div className="flex justify-between items-center w-[159px] border-1 border-gray-500 rounded-sm">
+              <div className="flex justify-between items-center w-[159px] border-1 border-gray-400 rounded-sm">
                 <div className="flex justify-center items-center h-11 w-10 text-2xl border-r-1 border-gray-500 hover:bg-[#DB4444] hover:text-white">
                   <FiMinus onClick={decrement} />
                 </div>
@@ -118,10 +120,10 @@ const G92Gamepad = () => {
                   <FiPlus onClick={increment} />
                 </div>
               </div>
-              <button className="py-2.5 px-12 border-1 border-gray-500 rounded-sm hover:bg-[#DB4444] hover:text-white">
+              <button className="py-2.5 px-12 border-1 border-gray-400 rounded-sm hover:bg-[#DB4444] hover:text-white">
                 Buy Now
               </button>
-              <div className="w-11 h-11 border-1 border-gray-500 flex justify-center items-center rounded-sm">
+              <div className="w-11 h-11 border-1 border-gray-400 flex justify-center items-center rounded-sm">
                 <IoHeart
                   onClick={handleHeartClick}
                   className={`w-8 h-8 cursor-pointer text-black  transition-colors ${
@@ -130,6 +132,18 @@ const G92Gamepad = () => {
                 />
               </div>
             </Flex>
+            <div className="border-1 border-gray-400 rounded-sm font-[poppins] font-medium">
+              <div>
+                <TbTruckDelivery className="text-[40px]"/>
+                <div>
+                  <p className=" leading-6">Free Delivery</p>
+                  <p className="leading-4.5 text-xs">Enter your postal code for Delivery Availability</p>
+                </div>
+              </div>
+              <div>
+
+              </div>
+            </div>
           </div>
         </div>
       </Container>
