@@ -8,6 +8,7 @@ import { RouterProvider } from "react-router/dom";
 import Home from './Pages/Home.jsx';
 import Shop from './Pages/Shop.jsx';
 import G92Gamepad from './ProductDetailsPage/G92Gamepad.jsx';
+import Cart from './Pages/Cart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/G92Gamepad",
     element: <G92Gamepad/>,
+  },
+  {
+    path: "/Cart",
+    element: <Cart/>,
   },
 ]);
 

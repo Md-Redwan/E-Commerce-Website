@@ -8,7 +8,7 @@ import { IoHeart } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import { useState } from "react";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
-import {NavLink } from "react-router-dom";
+import {NavLink, Link } from "react-router-dom";
 import { LuUser } from "react-icons/lu";
 
 
@@ -63,7 +63,9 @@ const NavBar = () => {
                     }`}
                   />
 
-                  <IoCartOutline className="w-8 h-8 cursor-pointer" />
+                  <Link to="/Cart">
+                    <IoCartOutline className="w-8 h-8 cursor-pointer" />
+                  </Link>
 
                   <LuUser className="w-8 h-8 cursor-pointer"/>
                 </div>
@@ -79,7 +81,9 @@ const NavBar = () => {
               }`}
             />
 
-            <IoCartOutline className="w-8 h-8 cursor-pointer" />
+            <Link to="/Cart">
+              <IoCartOutline className="w-8 h-8 cursor-pointer" />
+            </Link>
             <LuUser className="w-8 h-8 cursor-pointer"/>
             <HiMiniBars3BottomRight
               onClick={handleClick}

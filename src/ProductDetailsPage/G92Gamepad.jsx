@@ -13,6 +13,16 @@ import React, { useState } from "react";
 import Flex from "../Component/Flex";
 import { IoHeart } from "react-icons/io5";
 import { TbTruckDelivery } from "react-icons/tb";
+import { GiReturnArrow } from "react-icons/gi";
+import ItemCard from "../Component/ItemCard";
+import TitleCard from "../Component/TitleCard";
+import Footer from "../Component/Footer"
+import Monitor from "../assets/Monitor.png";
+import Gamepad from "../assets/Gamepad.png";
+import Keyboard from "../assets/Keyboard.png";
+import CpuCooler from "../assets/CpuCooler.png";
+
+
 
 
 
@@ -41,7 +51,7 @@ const G92Gamepad = () => {
           Account / Gaming /{" "}
           <span className="text-black">Havic HV G-92 Gamepad</span>
         </p>
-        <div className="flex justify-between mt-20">
+        <div className="flex justify-between mt-20 mb-35">
           <div className="w-[55%] flex gap-7.5">
             <div className="flex flex-col gap-4">
               <img src={G92pic1} alt="" />
@@ -72,7 +82,7 @@ const G92Gamepad = () => {
             <h5 className="text-2xl font-[inter] leading-6 tracking-[3px] mt-4">
               $192.00
             </h5>
-            <p className="text-sm leading-[21px] py-6 border-b-1 border-[#7D8184]">
+            <p className="text-sm leading-[21px] py-6 border-b-2 border-[#7D8184]">
               PlayStation 5 Controller Skin High quality vinyl with air channel
               adhesive for easy bubble free install & mess free removal Pressure
               sensitive.
@@ -109,21 +119,21 @@ const G92Gamepad = () => {
               </div>
             </div>
             <Flex className="justify-between items-center  mt-6">
-              <div className="flex justify-between items-center w-[159px] border-1 border-gray-400 rounded-sm">
+              <div className="flex justify-between items-center w-[159px] border-2 border-gray-400 rounded-sm">
                 <div className="flex justify-center items-center h-11 w-10 text-2xl border-r-1 border-gray-500 hover:bg-[#DB4444] hover:text-white">
                   <FiMinus onClick={decrement} />
                 </div>
                 <p className="font-[poppins leading-7 text-[20px] font-medium">
                   {count}
                 </p>
-                <div className="flex justify-center items-center h-11 w-10 text-2xl border-l-1 border-gray-500 hover:bg-[#DB4444] hover:text-white">
+                <div className="flex justify-center items-center h-11 w-[41px] text-2xl border-l-1 border-gray-500 hover:bg-[#DB4444] hover:text-white">
                   <FiPlus onClick={increment} />
                 </div>
               </div>
-              <button className="py-2.5 px-12 border-1 border-gray-400 rounded-sm hover:bg-[#DB4444] hover:text-white">
+              <button className="py-2.5 px-12 border-2 border-gray-400 rounded-sm hover:bg-[#DB4444] hover:text-white">
                 Buy Now
               </button>
-              <div className="w-11 h-11 border-1 border-gray-400 flex justify-center items-center rounded-sm">
+              <div className="w-11 h-11 border-2 border-gray-400 flex justify-center items-center rounded-sm">
                 <IoHeart
                   onClick={handleHeartClick}
                   className={`w-8 h-8 cursor-pointer text-black  transition-colors ${
@@ -132,21 +142,37 @@ const G92Gamepad = () => {
                 />
               </div>
             </Flex>
-            <div className="border-1 border-gray-400 rounded-sm font-[poppins] font-medium">
-              <div>
+            <div className="border-2 border-gray-400 rounded-sm font-[poppins] font-medium mt-10">
+              <div className="flex gap-4 py-5 px-4 border-b-2 border-gray-400">
                 <TbTruckDelivery className="text-[40px]"/>
                 <div>
                   <p className=" leading-6">Free Delivery</p>
                   <p className="leading-4.5 text-xs">Enter your postal code for Delivery Availability</p>
                 </div>
               </div>
-              <div>
-
+              <div className="flex gap-4 py-5 px-4">
+                <GiReturnArrow className="text-[40px]"/>
+                <div>
+                  <p className=" leading-6">Return Delivery</p>
+                  <p className="leading-4.5 text-xs">Free 30 Days Delivery Returns. Details</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="mb-35">
+          <TitleCard titleName="Related Item"/>
+          <div className="flex justify-between">
+            <ItemCard className="py-1 px-3" productLink="/G92Gamepad" image={Gamepad} discount="-40%"  productName="HAVIT HV-G92 Gamepad"  discountPrice= "$120" price= "$160" review="88"/>
+
+          <ItemCard className="py-1 px-3" image={Keyboard} discount="-35%"  productName="AK-900 Wired Keyboard"  discountPrice= "$960" price= "$1160" review="75"/>
+
+          <ItemCard className="py-1 px-3" image={Monitor} discount="-30%"  productName="IPS LCD Gaming Monitor"  discountPrice= "$370" price= "$400" review="99"/>
+          <ItemCard className="py-1 px-3" image={CpuCooler} discount="-6%"  productName="RGB liquid CPU Cooler"  discountPrice= "$160" price= "$170" review="65"/>
+          </div>
+        </div>
       </Container>
+      <Footer/>
     </div>
   );
 };
