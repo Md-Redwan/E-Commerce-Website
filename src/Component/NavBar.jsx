@@ -42,8 +42,8 @@ const NavBar = () => {
                 <NavLink to="/" className="hover:bg-blue-700 hover:rounded-lg px-2 py-2.5 lg:px-0 lg:py-0 lg:hover:bg-transparent">Home</NavLink>
                 <NavLink to="/Shop" className="hover:bg-blue-700 hover:rounded-lg px-2 py-2.5 lg:px-0 lg:py-0 lg:hover:bg-transparent">Shop</NavLink>
                 <NavLink className="hover:bg-blue-700 hover:rounded-lg px-2 py-2.5 lg:px-0 lg:py-0 lg:hover:bg-transparent">About</NavLink>
-                <NavLink className="hover:bg-blue-700 hover:rounded-lg px-2 py-2.5 lg:px-0 lg:py-0 lg:hover:bg-transparent">Contact</NavLink>
-                <NavLink className="hover:bg-blue-700 hover:rounded-lg px-2 py-2.5 lg:px-0 lg:py-0 lg:hover:bg-transparent">Sign Up</NavLink>
+                <NavLink to="/Contact" className="hover:bg-blue-700 hover:rounded-lg px-2 py-2.5 lg:px-0 lg:py-0 lg:hover:bg-transparent">Contact</NavLink>
+                <NavLink to="/SignUp" className="hover:bg-blue-700 hover:rounded-lg px-2 py-2.5 lg:px-0 lg:py-0 lg:hover:bg-transparent">Sign Up</NavLink>
               </List>
               <div className="lg:flex items-center gap-6">
                 <div className="flex bg-[#F5F5F5] items-center rounded-lg gap-4 py-2 px-3 mt-4 lg:ps-7 lg:pe-4 lg:gap-5 lg:py-3.5 lg:mt-0">

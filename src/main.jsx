@@ -9,6 +9,9 @@ import Home from './Pages/Home.jsx';
 import Shop from './Pages/Shop.jsx';
 import G92Gamepad from './ProductDetailsPage/G92Gamepad.jsx';
 import Cart from './Pages/Cart.jsx';
+import Error from './Pages/Error.jsx';
+import Contact from './Pages/Contact.jsx';
+import SignUp from './Pages/SignUp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,18 @@ const router = createBrowserRouter([
   {
     path: "/Cart",
     element: <Cart/>,
+  },
+  {
+    path: "/Error",
+    element: <Error/>,
+  },
+  {
+    path: "/Contact",
+    element: <Contact/>,
+  },
+  {
+    path: "/SignUp",
+    element: <SignUp/>,
   },
 ]);
 
