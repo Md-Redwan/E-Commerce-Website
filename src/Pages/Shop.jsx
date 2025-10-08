@@ -6,18 +6,23 @@ import Container from "../Component/Container";
 import List from "../Component/List";
 import ListItem from "../Component/ListItem";
 import { GoDotFill } from "react-icons/go";
-
 import Pagination from "../Component/Pagination";
+import Skeleton from "../Component/Skeleton";
+
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
+  const [loading,setLoading] = useState(false)
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
       .then((res) => res.json())
       .then((data)=>{
         setProducts(data.products)
-      });
+      })
+      // .then(
+      //   setLoading(true)
+      // )
   }, []);
   console.log(products)
 
@@ -78,12 +83,9 @@ const Shop = () => {
             </div>
             <div className="">
               {
-                // products.map((item)=>{
-                //   return(
-                
-                //   )
-                // })
+                loading ?
                   <Pagination itemsPerPage={6} products={products}/>
+                  : <Skeleton/>
               }
             </div>
           </div>
