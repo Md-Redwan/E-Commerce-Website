@@ -6,6 +6,7 @@ import { FaSquarePhone } from "react-icons/fa6";
 import { ImMail } from "react-icons/im";
 import Button from "../Component/Button";
 import Footer from "../Component/Footer";
+import BreadCrumb from "../Component/BreadCrumb";
 
 const Contact = () => {
   return (
@@ -13,9 +14,7 @@ const Contact = () => {
       <Header />
       <NavBar />
       <Container className="pb-35">
-        <p className="mt-20 text-[#7D8184] text-[14px] leading-[21px]">
-          Home / <span className="text-black">Contact</span>
-        </p>
+        <BreadCrumb/>
         <div className="flex gap-7.5 mt-20">
           <div className="w-[30%] py-10 px-8.5 box-shadow rounded-sm font-[poppins]">
             <div className="pb-8 border-b-2 border-b-gray-400">

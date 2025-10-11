@@ -8,11 +8,13 @@ import ListItem from "../Component/ListItem";
 import { GoDotFill } from "react-icons/go";
 import Pagination from "../Component/Pagination";
 import Skeleton from "../Component/Skeleton";
+import BreadCrumb from "../Component/BreadCrumb";
 
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [loading,setLoading] = useState(false)
+  const [loading,setLoading] = useState(false);
+  const [value,setValue] = useState(6)
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
@@ -20,20 +22,17 @@ const Shop = () => {
       .then((data)=>{
         setProducts(data.products)
       })
-      // .then(
-      //   setLoading(true)
-      // )
+      .then(
+        setLoading(true)
+      )
   }, []);
-  console.log(products)
 
   return (
     <div>
       <Header />
       <NavBar />
       <Container className="font-[poppins]">
-        <p className="mt-20 text-[#7D8184] text-[14px] leading-[21px]">
-          home / shop
-        </p>
+        <BreadCrumb/>
         <div className="flex justify-between mt-12.5">
           <div className="w-[25%]">
             <div>
@@ -74,18 +73,26 @@ const Shop = () => {
               <select
                 name=""
                 id=""
+                onChange={(e)=> setValue(e.target.value)}
                 className="px-[43px] py-[3px] border-1 border-[#D9D9D9] rounded-[5px]"
               >
-                <option value="">6</option>
-                <option value="">9</option>
-                <option value="">12</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
               </select>
             </div>
             <div className="">
               {
                 loading ?
-                  <Pagination itemsPerPage={6} products={products}/>
-                  : <Skeleton/>
+                  <Pagination itemsPerPage={value} products={products}/>
+                  : <div className="flex flex-wrap mt-7.5 gap-7.5">
+                    <Skeleton/>
+                    <Skeleton/>
+                    <Skeleton/>
+                    <Skeleton/>
+                    <Skeleton/>
+                    <Skeleton/>
+                  </div>
               }
             </div>
           </div>

@@ -11,8 +11,9 @@ const Pagination = ({ itemsPerPage, products }) => {
     return (
       <div className="flex flex-wrap gap-5">
         {currentItems &&
-          currentItems.map((item) => (
+          currentItems.map((item,index) => (
             <ItemCard
+            key={index}
               className="py-1 px-3"
               image={item.thumbnail}
               discount={item.discountPercentage}
