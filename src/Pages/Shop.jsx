@@ -9,23 +9,38 @@ import { GoDotFill } from "react-icons/go";
 import Pagination from "../Component/Pagination";
 import Skeleton from "../Component/Skeleton";
 import BreadCrumb from "../Component/BreadCrumb";
+import { useDispatch } from 'react-redux'
+import { ProductReducer } from "../ProductSlices/ProductSlices";
+
 
 
 const Shop = () => {
+
   const [products, setProducts] = useState([]);
+  
   const [loading,setLoading] = useState(false);
+
   const [value,setValue] = useState(6)
+
+  const [category, setCategory] = useState([])
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
       .then((res) => res.json())
-      .then((data)=>{
+       .then((data)=>{
         setProducts(data.products)
-      })
-      .then(
+        dispatch(ProductReducer(data.products))
         setLoading(true)
-      )
-  }, []);
+       });
+      
+  },[])
+
+  useEffect(()=>{
+    const uniqueCategories = [...new Set(products.map(item => item.category))]
+    setCategory(uniqueCategories)
+  },[products])
 
   return (
     <div>
@@ -38,7 +53,7 @@ const Shop = () => {
             <div>
               <h2 className="text-xl font-bold">Shop by Category</h2>
               <List className="mt-[15px] flex flex-col gap-4 leading-6">
-                <ListItem>Woman’s Fashion</ListItem>
+                {/* <ListItem>Woman’s Fashion</ListItem>
                 <ListItem>Men’s Fashion</ListItem>
                 <ListItem>Electronics</ListItem>
                 <ListItem>Home & Lifestyle</ListItem>
@@ -46,7 +61,11 @@ const Shop = () => {
                 <ListItem>Sports & Outdoor</ListItem>
                 <ListItem>Baby’s & Toys</ListItem>
                 <ListItem>Groceries</ListItem>
-                <ListItem>Health & Beauty</ListItem>
+                <ListItem>Health & Beauty</ListItem> */}
+
+                { category.map((item,idx)=>(
+                  <ListItem key={idx} className="pt-[15px] capitalize cursor-pointer" >{item}</ListItem>
+                ))}
               </List>
             </div>
             <div className="mt-10">
@@ -84,7 +103,7 @@ const Shop = () => {
             <div className="">
               {
                 loading ?
-                  <Pagination itemsPerPage={value} products={products}/>
+                  <Pagination itemsPerPage={value} />
                   : <div className="flex flex-wrap mt-7.5 gap-7.5">
                     <Skeleton/>
                     <Skeleton/>
