@@ -10,7 +10,7 @@ import Pagination from "../Component/Pagination";
 import Skeleton from "../Component/Skeleton";
 import BreadCrumb from "../Component/BreadCrumb";
 import { useDispatch } from 'react-redux'
-import { ProductReducer } from "../ProductSlices/ProductSlices";
+import { filterReducer, ProductReducer } from "../ProductSlices/ProductSlices";
 
 
 
@@ -42,6 +42,15 @@ const Shop = () => {
     setCategory(uniqueCategories)
   },[products])
 
+  function handlefilter(item) {
+    const filterItems = products.filter((categoryItem)=>categoryItem.category == item)
+    dispatch(filterReducer(filterItems))
+  }
+
+  function handleAllProducts() {
+    dispatch(ProductReducer(products))
+  }
+
   return (
     <div>
       <Header />
@@ -63,23 +72,24 @@ const Shop = () => {
                 <ListItem>Groceries</ListItem>
                 <ListItem>Health & Beauty</ListItem> */}
 
+                <ListItem className="cursor-pointer pt-4" onClick={handleAllProducts}>All Products</ListItem>
                 { category.map((item,idx)=>(
-                  <ListItem key={idx} className="pt-[15px] capitalize cursor-pointer" >{item}</ListItem>
+                  <ListItem key={idx} className="pt-[15px] capitalize cursor-pointer" onClick={()=>handlefilter(item)} >{item}</ListItem>
                 ))}
               </List>
             </div>
             <div className="mt-10">
               <h2 className="text-xl font-bold">Shop by Color</h2>
-              <List className="leading-7.5 text-[#767676] mt-[15px]">
-                <ListItem className="flex gap-2.5 items-center">
+              <List className="leading-7.5 text-[#767676] mt-[15px] ">
+                <ListItem className="flex gap-2.5 items-center cursor-not-allowed select-none">
                   <GoDotFill className="text-[20px] text-black" />
                   Color 1
                 </ListItem>
-                <ListItem className="flex gap-2.5 items-center py-4.5">
+                <ListItem className="flex gap-2.5 items-center my-4.5 cursor-not-allowed select-none">
                   <GoDotFill className="text-[20px] text-[#FF0000]" />
                   Color 2
                 </ListItem>
-                <ListItem className="flex gap-2.5 items-center">
+                <ListItem className="flex gap-2.5 items-center cursor-not-allowed select-none">
                   <GoDotFill className="text-[20px] text-[#00FF38]" />
                   Color 3
                 </ListItem>

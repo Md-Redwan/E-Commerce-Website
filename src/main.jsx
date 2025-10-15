@@ -7,7 +7,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Home from './Pages/Home.jsx';
 import Shop from './Pages/Shop.jsx';
-import G92Gamepad from './ProductDetailsPage/G92Gamepad.jsx';
+import ProductDetails from './ProductDetailsPage/ProductDetails.jsx';
 import Cart from './Pages/Cart.jsx';
 import Error from './Pages/Error.jsx';
 import Contact from './Pages/Contact.jsx';
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
     element: <Shop/>,
   },
   {
-    path: "/G92Gamepad",
-    element: <G92Gamepad/>,
+    path: "/ProductDetails",
+    element: <ProductDetails/>,
   },
   {
     path: "/Cart",

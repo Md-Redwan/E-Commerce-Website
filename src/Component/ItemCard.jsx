@@ -4,13 +4,21 @@ import Flex from "./Flex";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
-import Container from "./Container";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+
+
 
 const ItemCard = ({image,discount,productName,discountPrice,price,review,productLink,percentage,className,dollar}) => {
+  
+  const navigate = useNavigate();
+  
+  function handleProductDetails() {
+    navigate("/Productdetails")
+  }
+
   return (
     <div className="flex justify-center mt-15">
-      <div className="w-auto h-auto lg:w-[270px] lg:h-[350px] group font-[poppins]">
+      <div className="w-auto h-auto lg:w-[270px] lg:h-[350px] group font-[poppins]" onClick={handleProductDetails}>
         <div className="relative overflow-hidden bg-[#F5F5F5] rounded-sm">
           <img src={image} alt="" className="w-full"/>
           <h2 className={` bg-[#DB4444] leading-4.5 text-xs text-white inline rounded-sm absolute top-3 left-3 ${className}`}>

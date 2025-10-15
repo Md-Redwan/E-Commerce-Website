@@ -21,12 +21,13 @@ import Monitor from "../assets/Monitor.png";
 import Gamepad from "../assets/Gamepad.png";
 import Keyboard from "../assets/Keyboard.png";
 import CpuCooler from "../assets/CpuCooler.png";
+import BreadCrumb from "../Component/BreadCrumb";
 
 
 
 
 
-const G92Gamepad = () => {
+const ProductDetails = () => {
   const [heart, setHeart] = useState(false);
   const [count, setCount] = useState(0);
 
@@ -47,10 +48,7 @@ const G92Gamepad = () => {
       <Header />
       <NavBar />
       <Container>
-        <p className="mt-20 text-[#7D8184] text-[14px] leading-[21px]">
-          Account / Gaming /{" "}
-          <span className="text-black">Havic HV G-92 Gamepad</span>
-        </p>
+        <BreadCrumb/>
         <div className="flex justify-between mt-20 mb-35">
           <div className="w-[55%] flex gap-7.5">
             <div className="flex flex-col gap-4">
@@ -177,4 +175,4 @@ const G92Gamepad = () => {
   );
 };
 
-export default G92Gamepad;
+export default ProductDetails;
