@@ -66,7 +66,8 @@ const Banner = () => {
               <ListItem>Sports & Outdoor</ListItem>
               <ListItem>Baby’s & Toys</ListItem>
               <ListItem>Groceries</ListItem>
-              <ListItem>Health & Beauty</ListItem>
+              <ListItem>Health</ListItem>
+              <ListItem>Beauty</ListItem>
             </List>
           </div>
           <div className="lg:w-[70%] mt-5 rounded-lg">
